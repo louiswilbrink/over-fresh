@@ -4,4 +4,13 @@
   left: 0px;
   right: 0px;
   bottom: 0px;
+
+  .marker {
+    background-image: url('/assets/mapbox-icon.png');
+    background-size: cover;
+    width: 50px;
+    height: 62px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
 }
