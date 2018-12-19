@@ -8,8 +8,9 @@ import { Component, OnInit } from '@angular/core';
 
 export class AppComponent implements OnInit {
   title = 'oven-fresh';
+
   mapResults = {
-    type: 'FeatureCollection',
+   type: 'FeatureCollection',
     features: [{
       type: 'Feature',
       geometry: {
