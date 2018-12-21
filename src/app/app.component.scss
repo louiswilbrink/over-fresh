@@ -1,0 +1,26 @@
+// **********************************
+// Variables
+// **********************************
+
+// App renders two ways: mobile and desktop.
+// Anything wider than mobile will render as desktop.
+// If the device is in landscape mode, then the responsive breakpoint is wider.
+$mobile-width: 480px;
+$mobile-landscape-width: 814px;
+
+// **********************************
+// Mixins
+// **********************************
+
+@mixin mobile {
+  @media only screen 
+    and (max-width: #{$mobile-width}) 
+    and (-webkit-device-pixel-ratio : 3) 
+    and (orientation: portrait),
+    only screen 
+    and (max-width: #{$mobile-landscape-width}) 
+    and (-webkit-device-pixel-ratio : 3) 
+    and (orientation: landscape) {
+    @content;
+  }
+}
