@@ -36,4 +36,16 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
   }
+
+  onPlaceSearch() {
+    console.log('app.onPlaceSearch()');
+  }
+
+  onResultsSearch() {
+    console.log('app.onResultsSearch()');
+  }
+
+  onDirectionsSearch() {
+    console.log('app.onDirectionsSearch()');
+  }
 }

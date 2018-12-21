@@ -1,4 +1,8 @@
 <map [mapResults]="mapResults"></map>
 <app-place></app-place>
-<app-search></app-search>
+<app-search 
+  (onPlaceSearch)="onPlaceSearch($event)"
+  (onResultsSearch)="onResultsSearch($event)"
+  (onDirectionsSearch)="onDirectionsSearch($event)">
+</app-search>
 <router-outlet></router-outlet>
