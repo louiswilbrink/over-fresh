@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+
+import { Store, select } from '@ngrx/store';
+import { SearchPlace, SearchPlaces, ResetSearch } from './state/search.actions';
 
 @Component({
   selector: 'app-root',
@@ -8,6 +12,7 @@ import { Component, OnInit } from '@angular/core';
 
 export class AppComponent implements OnInit {
   title = 'oven-fresh';
+  search$: Observable<number>;
 
   mapResults = {
    type: 'FeatureCollection',
@@ -34,18 +39,22 @@ export class AppComponent implements OnInit {
     }]
   };
 
+  constructor(private store: Store<{ search: number }>) {
+    this.search$ = store.pipe(select('search'));
+  }
+
   ngOnInit() {
   }
 
   onPlaceSearch() {
-    console.log('app.onPlaceSearch()');
+    this.store.dispatch(new SearchPlace('Some GeoJSON'));
   }
 
   onResultsSearch() {
-    console.log('app.onResultsSearch()');
+    this.store.dispatch(new SearchPlaces('Some GeoJSON'));
   }
 
   onDirectionsSearch() {
-    console.log('app.onDirectionsSearch()');
+    this.store.dispatch(new ResetSearch('Reset'));
   }
 }

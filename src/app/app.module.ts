@@ -10,6 +10,9 @@ import { SearchComponent } from './search/search.component';
 import { ResultsComponent } from './results/results.component';
 import { PlaceComponent } from './place/place.component';
 
+import { StoreModule } from '@ngrx/store';
+import { searchReducer } from './state/search.reducers';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,6 +23,7 @@ import { PlaceComponent } from './place/place.component';
   ],
   imports: [
     BrowserModule,
+    StoreModule.forRoot({ search: searchReducer }),
     MatCardModule,
     AppRoutingModule
   ],
