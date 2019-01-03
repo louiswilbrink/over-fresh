@@ -5,4 +5,5 @@
   (onResultsSearch)="onResultsSearch($event)"
   (onDirectionsSearch)="onDirectionsSearch($event)">
 </app-search>
+<div style="position: absolute; top: 40px;">{{ search$ | async }}</div>
 <router-outlet></router-outlet>

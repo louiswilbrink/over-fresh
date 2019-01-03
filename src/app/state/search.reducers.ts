@@ -1,7 +1,7 @@
 import { Action } from '@ngrx/store';
-import { ActionTypes } from './search.actions';
+import { InitSearch, ActionTypes } from './search.actions';
  
-export const initialState = { type: '[Search] Init' };
+export const initialState = new InitSearch();
 
 export function searchReducer(state = initialState, action: Action) {
   switch (action.type) {

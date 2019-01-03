@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Store, select } from '@ngrx/store';
 import { Observable } from 'rxjs';
 
-import { Store, select } from '@ngrx/store';
+// App state actions.
 import { SearchPlace, SearchPlaces, ResetSearch } from './state/search.actions';
 
 @Component({
@@ -12,7 +13,7 @@ import { SearchPlace, SearchPlaces, ResetSearch } from './state/search.actions';
 
 export class AppComponent implements OnInit {
   title = 'oven-fresh';
-  search$: Observable<number>;
+  search$: Observable<object>;
 
   mapResults = {
    type: 'FeatureCollection',
@@ -39,7 +40,7 @@ export class AppComponent implements OnInit {
     }]
   };
 
-  constructor(private store: Store<{ search: number }>) {
+  constructor(private store: Store<{ search: object }>) {
     this.search$ = store.pipe(select('search'));
   }
 

@@ -1,9 +1,21 @@
 import { Action } from '@ngrx/store';
  
 export enum ActionTypes {
-  SearchPlace = '[Search] Place',
-  SearchPlaces = '[Search] Places',
-  ResetSearch = '[Search] Reset'
+  InitSearch = '[Search] Initialize Search',
+  SearchPlace = '[Search] Search Place',
+  SearchPlaces = '[Search] Search Places',
+  ResetSearch = '[Search] Reset Search'
+}
+
+export class InitSearch implements Action {
+  readonly type = ActionTypes.InitSearch;
+  meta = {
+    description: 'The application is initializing a new search state.'
+  };
+  payload: string = '';
+
+  constructor() {
+  }
 }
  
 export class SearchPlace implements Action {
