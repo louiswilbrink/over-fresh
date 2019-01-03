@@ -1,16 +1,20 @@
+// Dependency modules..
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { MatCardModule } from '@angular/material';
+import { StoreModule } from '@ngrx/store';
 
+// App modules.
 import { AppRoutingModule } from './app-routing.module';
+
+// App components.
 import { AppComponent } from './app.component';
 import { MapComponent } from './app/map/map.component';
 import { SearchComponent } from './search/search.component';
-import { ResultsComponent } from './results/results.component';
-import { PlaceComponent } from './place/place.component';
+import { PlaceComponent } from './components/place/place.component';
+import { PlacesComponent } from './components/places/places.component';
 
-import { StoreModule } from '@ngrx/store';
+// App reducers.
 import { searchReducer } from './state/search.reducers';
 
 @NgModule({
@@ -18,8 +22,8 @@ import { searchReducer } from './state/search.reducers';
     AppComponent,
     MapComponent,
     SearchComponent,
-    ResultsComponent,
-    PlaceComponent
+    PlaceComponent,
+    PlacesComponent
   ],
   imports: [
     BrowserModule,
