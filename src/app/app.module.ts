@@ -9,8 +9,8 @@ import { AppRoutingModule } from './app-routing.module';
 
 // App components.
 import { AppComponent } from './app.component';
-import { MapComponent } from './app/map/map.component';
-import { SearchComponent } from './search/search.component';
+import { MapComponent } from './components/map/map.component';
+import { SearchComponent } from './components/search/search.component';
 import { PlaceComponent } from './components/place/place.component';
 import { PlacesComponent } from './components/places/places.component';
 
