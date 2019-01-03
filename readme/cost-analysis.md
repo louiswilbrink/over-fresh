@@ -5,11 +5,11 @@ This is a summary of monthly expenses for OvenFresh to operate.
 
 | Category         | Annual Cost |
 |------------------|------------:|
-| Talent           | $9.839MM    |
+| Talent           | $9.139MM    |
 | Infrastructure   | $6MM        |
 | Overhead         | $976k       |
 
-*Total Annual Cost: $16.815MM*
+*Total Annual Cost: $16.115MM*
 
 ## Talent
 
@@ -17,14 +17,14 @@ Summary:
 
 | Team              | Size | Annual Cost  |
 |-------------------|:----:|-------------:|
-| Executive         | 5    | $2MM         |
+| Executive         | 5    | $1.3MM       |
 | Engineering       | 33   | $5.226MM     |
 | Sales & Marketing | 6    | $780k        |
 | Legal             | 2    | $650k        |
 | Accounting        | 3    | $585k        |
 | Design            | 4    | $598k        |
 
-*Total Annual Cost: $9.839MM*
+*Total Annual Cost: $9.139MM*
 
 ### Executive
 
@@ -33,9 +33,8 @@ Summary:
 | CEO            | $300k         |
 | VP (2)         | $400k         |
 | Director (2)   | $300k         |
-| Expense Budget | $700k         |
 
-*Total Annual Cost (loaded): $2MM*
+*Total Annual Cost (loaded): $1.3MM*
 
 ### Engineering
 
